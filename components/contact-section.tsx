@@ -8,22 +8,22 @@ const contactItems = [
   {
     icon: Mail,
     label: "Email",
-    value: "contact@cogniflow.ai",
+    value: "contactcogniflowautomations.com",
   },
   {
     icon: Phone,
     label: "Phone",
-    value: "+XX XXX XXX XXXX",
+    value: "+91 8638 398 943",
   },
   {
     icon: MapPin,
-    label: "Location",
+    label: "Bengaluru, Karnatka",
     value: "To be announced",
   },
   {
     icon: Globe,
     label: "Website",
-    value: "cogniflow.ai",
+    value: "cogniflowautomations.com",
   },
 ]
 
