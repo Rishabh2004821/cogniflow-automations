@@ -1,73 +1,95 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { SectionHeading } from "./section-heading"
-import { Mail, Phone, MapPin, Globe } from "lucide-react"
+import { Mail, Phone, MapPin } from "lucide-react"
+import { IoLogoLinkedin } from "react-icons/io5"
+import { IconType } from "react-icons"
 
-const contactItems = [
+type ContactItem = {
+  icon: IconType
+  label: string
+  value: string
+  link?: string
+}
+
+const contactItems: ContactItem[] = [
   {
     icon: Mail,
     label: "Email",
-    value: "contactcogniflowautomations.com",
+    value: "cogniflowautomations@gmail.com",
+    link: "mailto:cogniflowautomations@gmail.com?subject=Business Inquiry",
   },
   {
     icon: Phone,
     label: "Phone",
-    value: "+91 8638 398 943",
+    value: "+91 8638398943",
+    link: "tel:+91 8638398943", // Replace with real number
   },
   {
     icon: MapPin,
-    label: "Bengaluru, Karnataka",
-    value: "peenya 2nd stage",
+    label: "Location",
+    value: " Peenya, Bengaluru, Karnataka 560057",
   },
- {
-  icon: Linkedin,
-  label: "LinkedIn",
-  value: "https://www.linkedin.com/company/cogniflow-automations",
-},
+  {
+    icon: IoLogoLinkedin,
+    label: "LinkedIn",
+    value: "cogniflow-automations-b971823b1",
+    link: "https://www.linkedin.com/in/cogniflow-automations-b971823b1/",
+  },
 ]
 
 export function ContactSection() {
   return (
-    <section id="contact" className="relative px-6 py-32">
-      <div className="absolute left-1/2 top-0 h-px w-1/3 -translate-x-1/2 bg-border/50" />
+    <section
+      className="mb-28 w-full scroll-mt-28 text-center sm:mb-40"
+      id="contact"
+    >
+      <h1 className="text-5xl mb-10">Contact Me</h1>
 
-      <div className="mx-auto max-w-3xl">
-        <SectionHeading
-          label="Reach Out"
-          title="Get in Touch"
-          description="We are always open to meaningful conversations about the future of autonomous communication."
-        />
-
-        <div className="mt-12 grid gap-4 sm:grid-cols-2">
+      <div className="flex justify-center">
+        <motion.div
+          className="grid gap-6 max-w-2xl lg:grid-cols-2"
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2 }}
+          viewport={{ once: true }}
+        >
           {contactItems.map((item, i) => (
             <motion.div
-              key={item.label}
-              initial={{ opacity: 0, y: 16 }}
+              key={i}
+              className="group p-6 rounded-xl border hover:shadow-lg transition-all"
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-40px" }}
-              transition={{
-                duration: 0.5,
-                delay: i * 0.08,
-                ease: [0.25, 0.46, 0.45, 0.94],
-              }}
+              transition={{ delay: i * 0.1 }}
+              viewport={{ once: true }}
             >
-              <div className="pointer-events-none flex cursor-default select-none items-center gap-4 rounded-2xl border border-glass-border bg-glass/40 p-5 backdrop-blur-xl">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
-                  <item.icon className="h-4 w-4" />
-                </div>
-                <div>
-                  <span className="text-xs text-muted-foreground">
-                    {item.label}
-                  </span>
-                  <p className="text-sm font-medium text-foreground">
-                    {item.value}
-                  </p>
-                </div>
-              </div>
+              <item.icon className="mx-auto mb-4 h-8 w-8 text-gray-700 dark:text-white/80" />
+
+              <h3 className="mb-2 font-medium text-lg">
+                {item.label}
+              </h3>
+
+              {item.link ? (
+                <a
+                  href={item.link}
+                  target={item.label === "LinkedIn" ? "_blank" : undefined}
+                  rel={
+                    item.label === "LinkedIn"
+                      ? "noopener noreferrer"
+                      : undefined
+                  }
+                  className="text-gray-700 hover:underline dark:text-white/80 break-all"
+                >
+                  {item.value}
+                </a>
+              ) : (
+                <p className="text-gray-700 dark:text-white/80">
+                  {item.value}
+                </p>
+              )}
             </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   )
