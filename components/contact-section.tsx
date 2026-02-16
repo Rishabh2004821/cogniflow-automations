@@ -17,14 +17,14 @@ const contactItems = [
   },
   {
     icon: MapPin,
-    label: "Bengaluru, Karnatka",
-    value: "To be announced",
+    label: "Bengaluru, Karnataka",
+    value: "peenya 2nd stage",
   },
-  {
-    icon: Globe,
-    label: "Website",
-    value: "cogniflowautomations.com",
-  },
+ {
+  icon: Linkedin,
+  label: "LinkedIn",
+  value: "https://www.linkedin.com/company/cogniflow-automations",
+},
 ]
 
 export function ContactSection() {
