@@ -34,7 +34,7 @@ const contactItems: ContactItem[] = [
     icon: IoLogoLinkedin,
     label: "LinkedIn",
     value: "cogniflow-automations-b971823b1",
-    link: "https://www.linkedin.com/in/cogniflow-automations-b971823b1/",
+    link: "https://www.linkedin.com/company/cogniflow-automations-llp/?viewAsMember=true",
   },
 ]
 
