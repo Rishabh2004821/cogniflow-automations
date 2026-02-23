@@ -17,7 +17,7 @@ const contactItems: ContactItem[] = [
     icon: Mail,
     label: "Email",
     value: "infocogniflow@gmail.com",
-    link: "mailto:cogniflowautomations@gmail.com?subject=Business Inquiry",
+    link: "mailto:mailcogniflow@gmail.com?subject=Business Inquiry",
   },
   {
     icon: Phone,
