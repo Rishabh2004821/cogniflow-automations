@@ -18,6 +18,9 @@ export const metadata: Metadata = {
   description:
     'Building AI-driven calling agents today — evolving toward fully automated business workflows for tomorrow.',
   keywords: ['AI', 'automation', 'calling agents', 'business workflows', 'Cogniflow'],
+icons:{
+  icon:"/icon.png"
+}
 }
 
 export const viewport: Viewport = {
