@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "cogniflow-automations",
+			"path": ".."
+		},
+		{
+			"name": "public",
+			"path": "../../cogniflow-landing-page/public"
+		}
+	],
+	"settings": {}
+}
