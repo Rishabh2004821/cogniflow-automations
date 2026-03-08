@@ -81,6 +81,7 @@ export function HeroSection() {
           transition={{ delay: 1.4, duration: 0.8 }}
           className="absolute bottom-12"
         >
+          
           <motion.div
             animate={{ y: [0, 8, 0] }}
             transition={{
@@ -91,7 +92,7 @@ export function HeroSection() {
             className="flex flex-col items-center gap-2"
           >
             <span className="text-xs tracking-widest text-muted-foreground/60">
-              SCROLL
+            
             </span>
             <div className="h-8 w-px bg-muted-foreground/20" />
           </motion.div>
