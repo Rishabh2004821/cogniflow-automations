@@ -59,7 +59,7 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="mt-2 font-mono text-sm uppercase tracking-[0.15em] text-primary md:text-base"
+          className="mt-2 font-mono text-3xl uppercase tracking-[0.15em] text-primary md:text-base"
         >
           Autonomous Communication. Intelligent Operations.
         </motion.p>
