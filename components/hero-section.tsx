@@ -91,9 +91,6 @@ export function HeroSection() {
             }}
             className="flex flex-col items-center gap-2"
           >
-            <span className="text-xs tracking-widest text-muted-foreground/60">
-            SCROLL
-            </span>
             <div className="h-8 w-px bg-muted-foreground/20" />
           </motion.div>
         </motion.div>
