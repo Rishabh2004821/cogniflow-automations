@@ -15,7 +15,7 @@ export function SiteFooter() {
         </div>
 
         <div className="flex flex-wrap items-center justify-center gap-6 text-xs text-muted-foreground">
-          <span>infocogniflow@gmail.com</span>
+          <span>rishabh@cogniflowautomations.com</span>
           <span className="hidden h-3 w-px bg-border sm:block" />
           <span>+91 8638398943</span>
         </div>
